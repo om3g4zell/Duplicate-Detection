@@ -4,7 +4,7 @@ import ij.ImagePlus;
 
 public class DuplicateDetection {
 
-    public float getDistWithSAD(ImagePlus image1, ImagePlus image2) {
+    public static int getDistWithSAD(ImagePlus image1, ImagePlus image2) {
 
         int width1 = image1.getWidth();
         int height1 = image1.getHeight();
