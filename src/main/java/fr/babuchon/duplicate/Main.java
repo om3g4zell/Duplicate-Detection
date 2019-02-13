@@ -7,9 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
@@ -34,6 +37,7 @@ public class Main {
 
         for(int i = 0 ; i < files.length; i++) {
             File currentFolder = files[i];
+            System.out.println("-----------------" + currentFolder.getName() + "-----------------") ;
             File[] different = currentFolder.listFiles(pathname -> {
                 if(pathname.getName().equals("different")) return true;
                 return false;
@@ -73,8 +77,8 @@ public class Main {
                     ImagePlus i1 = imagesDuplicate.get(j);
                     //float ratio = (float)i1.getWidth() / i1.getHeight();
 
-                    for(int x = 0; x < imagesDuplicate.size() / 2; x++) {
-                        if(x == j) continue;
+                    for(int x = 0; x < imagesDuplicate.size(); x++) {
+                        if(x <= j) continue;
                         ImagePlus i2 = imagesDuplicate.get(x);
 //                        float ratio2 = (float)i2.getWidth() / i2.getHeight();
 //                        if(ratio != ratio2) {
@@ -82,12 +86,18 @@ public class Main {
 //                        }
 //                        ratio = ratio2;
 //                        i1 = i2;
-                        resizeImages(i1, i2);
+                        ImagePlus[] computed = resizeImages(i1, i2);
+
+                        ImagePlus i1_computed = computed[0];
+                        ImagePlus i2_computed = computed[1];
+
+
                         // Voir si on crop ou pas;
 
 
                         // On calcule la distance souhaité
-                        int sad = DuplicateDetection.getDistWithSAD(i1, i2);
+                        int sad = DuplicateDetection.getDistWithSAD(i1_computed, i2_computed);
+                        System.out.println(i1_computed.getTitle() + " / " + i2_computed.getTitle() + " SAD : " + sad);
                         if(duplicateStats.containsKey(sad)) {
                             duplicateStats.put(sad, duplicateStats.get(sad) + 1);
                         }
@@ -99,8 +109,12 @@ public class Main {
                     // Pas fou car les redimensionnement d'au dessus impact et inversement
                     for(int x = 0; x < imagesDifferent.size(); x++) {
                         ImagePlus i2 = imagesDifferent.get(x);
-                        resizeImages(i1, i2);
-                        int sad = DuplicateDetection.getDistWithSAD(i1, i2);
+
+                        ImagePlus[] computed = resizeImages(i1, i2);
+                        ImagePlus i1_computed = computed[0];
+                        ImagePlus i2_computed = computed[1];
+
+                        int sad = DuplicateDetection.getDistWithSAD(i1_computed, i2_computed);
                         if(differentStats.containsKey(sad)) {
                             differentStats.put(sad, differentStats.get(sad) + 1);
                         }
@@ -113,13 +127,27 @@ public class Main {
                 }
             }
 
-        }
-        LOGGER.info("------------DIFFERENT------------");
-        differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));
-        LOGGER.info("------------DUPLICATE------------");
-        duplicateStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));
-        LOGGER.info("Duplicate : {}, Different : {}", duplicateNumber, differentNumber);
 
+        }
+//        LOGGER.info("------------DIFFERENT------------");
+//        differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));
+//        LOGGER.info("------------DUPLICATE------------");
+//        duplicateStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));differentStats.entrySet().stream().sorted((e,e2)->Integer.compare(e2.getValue(), e.getValue())).forEach(e->LOGGER.info("Key : {}, Value : {}", e.getKey(), e.getValue()));
+//        LOGGER.info("Duplicate : {}, Different : {}", duplicateNumber, differentNumber);
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(new File("res/stats_SAD.txt"));
+            for(Map.Entry<Integer, Integer> e : duplicateStats.entrySet()) {
+                fw.write(e.getKey() + "; " + e.getValue() + "\n");
+            }
+            fw.write("\n");
+            for(Map.Entry<Integer, Integer> e : differentStats.entrySet()) {
+                fw.write(e.getKey() + "; " + e.getValue() + "\n");
+            }
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         /*File file = new File(PATH);
 
         for(int i = 0 ; i < 30; i++) {
@@ -138,7 +166,8 @@ public class Main {
 
     }
 
-    public static void resizeImages(ImagePlus i1, ImagePlus i2) {
+    public static ImagePlus[] resizeImages(ImagePlus i1, ImagePlus i2) {
+
         ImageConverter ic1 = new ImageConverter(i1);
         ImageConverter ic2 = new ImageConverter(i2);
 
@@ -155,8 +184,10 @@ public class Main {
         // On resize sur la plus petite image car il faut mieux perdre de l'information que d'en créer
         // Voir pour ne pas redimensioner l'image original car ça impact les résultats
         if(i1.getHeight() < i2.getHeight())
-            i2.setProcessor(ip2.resize(i1.getWidth(), i1.getHeight()));
+            ip2 = ip2.resize(i1.getWidth(), i1.getHeight());
         else
-            i1.setProcessor(ip1.resize(i2.getWidth(), i2.getHeight()));
+            ip1 = ip1.resize(i2.getWidth(), i2.getHeight());
+
+        return new ImagePlus[]{new ImagePlus(i1.getTitle(), ip1), new ImagePlus(i2.getTitle(), ip2)};
     }
 }
