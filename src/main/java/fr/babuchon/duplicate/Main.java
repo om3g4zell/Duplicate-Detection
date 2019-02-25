@@ -16,10 +16,12 @@ public class Main {
     private static final String PATH = "D:\\Images\\PRD\\Doublon_exact_scale";
     private static final boolean CROP = true;
     private static final boolean NORMALIZED = true;
-    private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + NORMALIZED + "_" + CROP + ".txt";
+    private static final String METHOD = "ncc";
+    private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + METHOD + "_" + NORMALIZED + "_" + CROP + ".txt";
     private static final int[] POW_2 = {16, 32, 64, 128, 256};
-    private static HashMap<Integer, Integer> duplicateStats;
-    private static HashMap<Integer, Integer> differentStats;
+    private static HashMap<Double, Integer> duplicateStats;
+    private static HashMap<Double, Integer> differentStats;
+
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
@@ -86,10 +88,10 @@ public class Main {
                         ImagePlus i2_computed = computed[1];
 
                         // On calcule la distance souhaité
-                        int dist = DuplicateDetection.getDistWithSAD(i1_computed, i2_computed, NORMALIZED);
+                        double dist = DuplicateDetection.getDist(i1_computed, i2_computed, NORMALIZED, METHOD);
 
 
-                        System.out.println(i1_computed.getTitle() + " / " + i2_computed.getTitle() + " SAD : " + dist);
+                        LOGGER.debug("Duplicate : " + i1_computed.getTitle() + " / " + i2_computed.getTitle() + " " + METHOD +" : " + dist);
                         if (duplicateStats.containsKey(dist)) {
                             duplicateStats.put(dist, duplicateStats.get(dist) + 1);
                         } else {
@@ -105,11 +107,12 @@ public class Main {
                         ImagePlus i1_computed = computed[0];
                         ImagePlus i2_computed = computed[1];
 
-                        int sad = DuplicateDetection.getDistWithSAD(i1_computed, i2_computed, NORMALIZED);
-                        if (differentStats.containsKey(sad)) {
-                            differentStats.put(sad, differentStats.get(sad) + 1);
+                        double dist = DuplicateDetection.getDist(i1_computed, i2_computed, NORMALIZED, METHOD);
+                        LOGGER.debug("Different : " + i1_computed.getTitle() + " / " + i2_computed.getTitle() + " " + METHOD +" : " + dist);
+                        if (differentStats.containsKey(dist)) {
+                            differentStats.put(dist, differentStats.get(dist) + 1);
                         } else {
-                            differentStats.put(sad, 1);
+                            differentStats.put(dist, 1);
                         }
 
                     }
