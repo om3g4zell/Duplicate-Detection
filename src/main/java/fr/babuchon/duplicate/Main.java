@@ -1,5 +1,6 @@
 package fr.babuchon.duplicate;
 
+import fr.babuchon.duplicate.duplicate.DuplicateDetection;
 import ij.ImagePlus;
 import ij.process.ImageConverter;
 import ij.process.ImageProcessor;
@@ -14,9 +15,9 @@ public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     private static final String PATH = "D:\\Images\\PRD\\Doublon_exact_scale";
-    private static final boolean CROP = true;
+    private static final boolean CROP = false;
     private static final boolean NORMALIZED = true;
-    private static final String METHOD = "ncc";
+    private static final String METHOD = "sad";
     private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + METHOD + "_" + NORMALIZED + "_" + CROP + ".txt";
     private static final int[] POW_2 = {16, 32, 64, 128, 256};
     private static HashMap<Double, Integer> duplicateStats;
@@ -99,7 +100,7 @@ public class Main {
                         }
 
                     }
-                    // Pas fou car les redimensionnement d'au dessus impact et inversement
+
                     for (int x = 0; x < imagesDifferent.size(); x++) {
                         ImagePlus i2 = imagesDifferent.get(x);
 
@@ -119,7 +120,6 @@ public class Main {
 
                 }
             }
-
 
         }
         try (final PrintWriter pw = new PrintWriter(new File(STATS_PATH))) {

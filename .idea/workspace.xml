@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0364dd1f-ce64-473c-a332-aea5949e4581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/model/ImageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsRes/Le Figaro_2575626.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsRes/Tele loisir_3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_1550075338893_ncc_true_true.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_1550075691515_ssd_true_true.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_1550075949258_ncc_true_true.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_1550136667929_ncc_true_true.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_1551083561650_ncc_true_false.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stats_SAD.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/DuplicateDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/model/ImageData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="-794">
               <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,6 +50,39 @@
                 <element signature="e#2732#2733#0" expanded="true" />
                 <element signature="e#2764#2765#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="176" column="13" lean-forward="true" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/stats_1551109580666_sad_true_false.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -85,11 +121,12 @@
         <option value="$PROJECT_DIR$/src/main/java/duplicate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/DuplicateDetection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/model/ImageData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" />
       </list>
     </option>
   </component>
@@ -173,6 +210,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="duplicate" type="462c0819:PsiDirectoryNode" />
+              <item name="duplicate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DuplicateExtractor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DuplicateExtractor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="duplicate" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551109313942" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551109743348" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Crawler-multi-sources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -233,13 +279,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.TestMedatada">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.babuchon.duplicate.Main" />
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="duplicate.Main" />
       <module name="DuplicateExtractor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.babuchon.duplicate.*" />
+          <option name="PATTERN" value="duplicate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -248,11 +294,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="duplicate.Main" />
+      <option name="MAIN_CLASS_NAME" value="fr.babuchon.duplicate.Main" />
       <module name="DuplicateExtractor" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="duplicate.*" />
+          <option name="PATTERN" value="fr.babuchon.duplicate.duplicate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,9 +326,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.AppTest.TestMedatada" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -305,7 +351,7 @@
       <workItem from="1551082183770" duration="2459000" />
       <workItem from="1551087571606" duration="4200000" />
       <workItem from="1551108588888" duration="172000" />
-      <workItem from="1551108793935" duration="519000" />
+      <workItem from="1551108793935" duration="1456000" />
     </task>
     <servers />
   </component>
@@ -342,7 +388,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37236000" />
+    <option name="totallyTimeSpent" value="38173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -430,13 +476,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/stats_1550048417968.txt" />
     <entry file="file://$PROJECT_DIR$/res/stats_1550049910929.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_SAD.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="11" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/stats_1550050020807.txt" />
     <entry file="file://$PROJECT_DIR$/res/stats_1550049864098.txt" />
     <entry file="file://$PROJECT_DIR$/res/stats_1550050728603.txt" />
@@ -522,16 +561,6 @@
     <entry file="file://$PROJECT_DIR$/res/stats_1550075691515_ssd_true_true.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/DuplicateDetection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="103" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/stats_1551083561650_ncc_true_false.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -542,13 +571,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/model/ImageData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="-794">
+          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2433#2434#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2609#2610#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2696#2697#0" expanded="true" />
+            <element signature="e#2732#2733#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_SAD.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-666">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -562,20 +616,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/model/ImageData.java">
+    <entry file="file://$PROJECT_DIR$/res/stats_1551109580666_sad_true_false.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        <state relative-caret-position="18">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="176" column="13" lean-forward="true" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2433#2434#0" expanded="true" />
-            <element signature="e#2465#2466#0" expanded="true" />
-            <element signature="e#2609#2610#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-            <element signature="e#2667#2668#0" expanded="true" />
-            <element signature="e#2696#2697#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-package fr.babuchon.duplicate;
+package fr.babuchon.duplicate.duplicate;
 
 import ij.ImagePlus;
 import org.slf4j.Logger;
