@@ -11,8 +11,6 @@ public class DuplicateDetection {
 
     public static double getDist(ImagePlus image1, ImagePlus image2, boolean normalized, String method) {
 
-
-
         int width1 = image1.getWidth();
         int height1 = image1.getHeight();
 
