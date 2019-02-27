@@ -15,9 +15,9 @@ public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
     private static final String PATH = "D:\\Images\\PRD\\Doublon_exact_scale";
-    private static final boolean CROP = false;
+    private static final boolean CROP = true;
     private static final boolean NORMALIZED = true;
-    private static final String METHOD = "sad";
+    private static final String METHOD = "ncc";
     private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + METHOD + "_" + NORMALIZED + "_" + CROP + ".txt";
     private static final int[] POW_2 = {16, 32, 64, 128, 256};
     private static HashMap<Double, Integer> duplicateStats;
@@ -122,6 +122,7 @@ public class Main {
             }
 
         }
+        LOGGER.info("Duplicates : {} / Differents : {}", duplicateNumber, differentNumber);
         try (final PrintWriter pw = new PrintWriter(new File(STATS_PATH))) {
             duplicateStats.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEachOrdered(entry -> pw.println(entry.getKey() + ";" + entry.getValue()));
             pw.println();

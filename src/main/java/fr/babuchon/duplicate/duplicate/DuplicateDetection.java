@@ -9,7 +9,7 @@ public class DuplicateDetection {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DuplicateDetection.class);
 
-    public static double getDist(ImagePlus image1, ImagePlus image2, boolean normalized, String method) {
+    public static double getDist(ImagePlus image1, ImagePlus image2, boolean normalized, String method) throws IllegalArgumentException{
 
         int width1 = image1.getWidth();
         int height1 = image1.getHeight();
@@ -20,6 +20,9 @@ public class DuplicateDetection {
         LOGGER.debug("Width : {}; Height : {} / Width : {}; Height : {}", width1, height1, width2, height2);
 
         // TODO CHECK SI LES IMAGES SONT BIEN EN NOIR ET BLANC
+        if(image1.getType() != ImagePlus.GRAY8 || image2.getType() != ImagePlus.GRAY8) {
+            throw new IllegalArgumentException("Erreur les images doivent être en noir et blanc");
+        }
 
         if(width1 != width2 || height1 != height2) {
             throw new IllegalArgumentException("Erreur les images doivent avoir les mêmes dimensions");

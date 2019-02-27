@@ -87,14 +87,6 @@ public class ImageData {
     }
 
     /**
-     * Return the image file
-     * @return File : the image file
-     */
-    public File getImageFile() {
-        return imageFile;
-    }
-
-    /**
      * Return the Width of the image
      * @return int : The Width of the image, -1 if can't extract it
      */
