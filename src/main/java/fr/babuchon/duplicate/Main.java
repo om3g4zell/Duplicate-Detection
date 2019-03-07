@@ -23,12 +23,18 @@ public class Main {
     private static HashMap<Double, Integer> duplicateStats;
     private static HashMap<Double, Integer> differentStats;
 
+    private static ArrayList<Double> differentResults;
+    private static ArrayList<Double> duplicateResults;
+
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 
         duplicateStats = new HashMap<>();
         differentStats = new HashMap<>();
+
+        differentResults = new ArrayList<>();
+        duplicateResults = new ArrayList<>();
 
 
         File folder = new File(PATH);
@@ -98,6 +104,7 @@ public class Main {
                         } else {
                             duplicateStats.put(dist, 1);
                         }
+                        duplicateResults.add(dist);
 
                     }
 
@@ -115,6 +122,7 @@ public class Main {
                         } else {
                             differentStats.put(dist, 1);
                         }
+                        differentResults.add(dist);
 
                     }
 
@@ -124,9 +132,11 @@ public class Main {
         }
         LOGGER.info("Duplicates : {} / Differents : {}", duplicateNumber, differentNumber);
         try (final PrintWriter pw = new PrintWriter(new File(STATS_PATH))) {
-            duplicateStats.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEachOrdered(entry -> pw.println(entry.getKey() + ";" + entry.getValue()));
+            //duplicateStats.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEachOrdered(entry -> pw.println(entry.getKey() + ";" + entry.getValue()));
+            duplicateResults.stream().sorted().forEachOrdered(entry -> pw.println(entry));
             pw.println();
-            differentStats.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEachOrdered(entry -> pw.println(entry.getKey() + ";" + entry.getValue()));
+            //differentStats.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEachOrdered(entry -> pw.println(entry.getKey() + ";" + entry.getValue()));
+            differentResults.stream().sorted().forEachOrdered(entry -> pw.println(entry));
         } catch (Exception e) {
             LOGGER.error("Aie", e);
         }

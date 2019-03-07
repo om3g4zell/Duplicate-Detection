@@ -47,7 +47,10 @@ public class DuplicateDetection {
         }
 
         if(normalized)
-            return (double)dist / (width1 * height1);
+            if(method.equals("sad"))
+                return (double)(dist / (width1 * height1)) / 255f;
+            else
+                return (double)(dist / (width1 * height1)) / (255f * 255f);
         return dist;
     }
 
@@ -101,5 +104,7 @@ public class DuplicateDetection {
             LOGGER.error("{}//{}", sum, sqsum1*sqsum2);
         return sum / Math.sqrt(sqsum1 * sqsum2);
     }
+
+    // TODO same methods with template matching
 
 }
