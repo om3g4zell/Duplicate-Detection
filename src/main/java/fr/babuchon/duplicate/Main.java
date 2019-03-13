@@ -17,7 +17,7 @@ public class Main {
     private static final String PATH = "D:\\Images\\PRD\\Doublon_exact_scale";
     private static final boolean CROP = true;
     private static final boolean NORMALIZED = true;
-    private static final String METHOD = "sad";
+    private static final String METHOD = "ncc";
     private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + METHOD + "_" + NORMALIZED + "_" + CROP + ".txt";
     private static final int[] POW_2 = {16, 32, 64, 128, 256};
     private static HashMap<Double, Integer> duplicateStats;
@@ -29,7 +29,13 @@ public class Main {
 
 
     public static void main(String[] args) {
-
+        File resFile = new File("/res");
+        if(!resFile.exists()) {
+            if (!resFile.mkdir()) {
+                LOGGER.error("Impossible de créer le fichier res !");
+                return;
+            }
+        }
         if(METHOD.equals("ncc")) {
             method = new NCC();
         }

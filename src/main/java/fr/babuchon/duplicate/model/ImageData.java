@@ -44,7 +44,7 @@ public class ImageData {
     /**
      * Constructor, init attributes and extract metadatas
      * @param file : The image file
-     * @throws IOException
+     * @throws IOException : If the file doesn't exist
      */
     public ImageData(File file) throws IOException{
         this.imageFile = file;
