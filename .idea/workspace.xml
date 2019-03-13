@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0364dd1f-ce64-473c-a332-aea5949e4581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/NCC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SAD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SSD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,52 +23,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+            <state relative-caret-position="-2528">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/stats_1552470391302_ssd_true_true.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="831" lean-forward="true" selection-start-line="138" selection-end-line="831" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/stats_1552470465830_sad_true_true.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="635">
+              <caret line="831" lean-forward="true" selection-start-line="138" selection-end-line="831" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/stats_1552470325525_ncc_true_true.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/stats_1551955648100_ncc_true_true.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="878" column="18" lean-forward="true" selection-start-line="878" selection-start-column="18" selection-end-line="878" selection-end-column="18" />
-            </state>
+        <entry file="file://$PROJECT_DIR$/res/log-2019-03-05-1.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-1188" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/stats_1551955064015_ncc_true_true.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/stats_1551866986450_sad_true_true.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/NCC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/stats_1551789576451_ncc_true_true.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="52" column="74" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
+            <state relative-caret-position="216">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,13 +84,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/stats_1551789869328_ncc_true_true.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SAD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/stats_1550075423083_sad_true_true.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SSD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -96,8 +121,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,13 +137,15 @@
       <find>3408</find>
       <find>0.39</find>
       <find>0.97</find>
-      <find>0.58</find>
       <find>33.6</find>
       <find>0.78</find>
       <find>1557</find>
       <find>0.090</find>
       <find>0.1240</find>
       <find>0.5218</find>
+      <find>0.58</find>
+      <find>Telerama_df698204-ae2e-4873-8d31-05e4c61294c9</find>
+      <find>0.63</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +167,12 @@
         <option value="$PROJECT_DIR$/src/test/java/fr/babuchon/duplicate/model/ImageDataTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/fr/babuchon/duplicate/duplicate/DuplicateDetectionTest.java" />
         <option value="$PROJECT_DIR$/res/stats_1551865218215_sad_true_true.txt" />
+        <option value="$PROJECT_DIR$/res/stats_1551955648100_ncc_true_true.txt" />
         <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/NCC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateMethod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SAD.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SSD.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java" />
       </list>
     </option>
@@ -163,8 +196,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="58" />
+    <option name="y" value="-982" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -174,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -274,13 +308,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551793151962" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552471256787" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -434,6 +467,9 @@
       <workItem from="1551789417741" duration="3028000" />
       <workItem from="1551856294108" duration="4037000" />
       <workItem from="1551951791332" duration="3213000" />
+      <workItem from="1552378423033" duration="2498000" />
+      <workItem from="1552406683588" duration="262000" />
+      <workItem from="1552469111806" duration="2249000" />
     </task>
     <servers />
   </component>
@@ -470,13 +506,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58776000" />
+    <option name="totallyTimeSpent" value="63785000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-327" y="-1448" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19395867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -484,8 +520,8 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.11700975" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.065005414" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.16523772" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.070927516" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998441" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -500,7 +536,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.18710022" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.13950716" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -568,29 +604,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/stats_1550065461476_sad_true_false.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550068974402_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550069249436_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550070771831_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550070818621_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550065414048_ssd_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550065657836_sad_true_false.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1550071003313_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1550075338893_ncc_true_true.txt" />
-    <entry file="file://$PROJECT_DIR$/res/stats_1551083747969_ncc_true_false.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/stats_1550136667929_ncc_true_true.txt" />
     <entry file="file://$PROJECT_DIR$/res/stats_1550075949258_ncc_true_true.txt" />
     <entry file="file://$PROJECT_DIR$/res/stats_1550075691515_ssd_true_true.txt" />
@@ -710,20 +723,51 @@
     <entry file="file://$PROJECT_DIR$/res/stats_1551866829261_ssd_true_true.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1551953814653_ncc_true_true.txt" />
+    <entry file="file://$PROJECT_DIR$/res/stats_1551954104734_ncc_true_true.txt" />
+    <entry file="file://$PROJECT_DIR$/res/stats_1551954920259_ncc_true_true.txt" />
+    <entry file="file://$PROJECT_DIR$/res/stats_1551955064015_ncc_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1551866986450_sad_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552381708608_ncc_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552382008149_ncc_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14958">
+          <caret line="831" selection-start-line="138" selection-end-line="831" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552381527275_ncc_true_false.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16092">
+          <caret line="894" selection-start-line="894" selection-end-line="901" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1551955648100_ncc_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="171" column="18" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/stats_1551789576451_ncc_true_true.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="52" column="74" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,6 +777,63 @@
     <entry file="file://$PROJECT_DIR$/res/stats_1550075423083_sad_true_true.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateDetection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="20" selection-start-line="34" selection-start-column="8" selection-end-line="53" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/NCC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SAD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/SSD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552470325525_ncc_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552470391302_ssd_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="831" lean-forward="true" selection-start-line="138" selection-end-line="831" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/stats_1552470465830_sad_true_true.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="831" lean-forward="true" selection-start-line="138" selection-end-line="831" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/fr/babuchon/duplicate/duplicate/DuplicateDetectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -740,48 +841,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551866986450_sad_true_true.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551953814653_ncc_true_true.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551954104734_ncc_true_true.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5976">
-          <caret line="332" column="20" selection-start-line="332" selection-start-column="20" selection-end-line="332" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551954920259_ncc_true_true.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551955064015_ncc_true_true.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        <state relative-caret-position="-2528">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/stats_1551955648100_ncc_true_true.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/babuchon/duplicate/duplicate/DuplicateMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="878" column="18" lean-forward="true" selection-start-line="878" selection-start-column="18" selection-end-line="878" selection-end-column="18" />
+        <state relative-caret-position="288">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/log-2019-03-05-1.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-1188" />
       </provider>
     </entry>
   </component>

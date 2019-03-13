@@ -1,6 +1,6 @@
 package fr.babuchon.duplicate;
 
-import fr.babuchon.duplicate.duplicate.DuplicateDetection;
+import fr.babuchon.duplicate.duplicate.*;
 import ij.ImagePlus;
 import ij.process.ImageConverter;
 import ij.process.ImageProcessor;
@@ -17,17 +17,34 @@ public class Main {
     private static final String PATH = "D:\\Images\\PRD\\Doublon_exact_scale";
     private static final boolean CROP = true;
     private static final boolean NORMALIZED = true;
-    private static final String METHOD = "ncc";
+    private static final String METHOD = "sad";
     private static final String STATS_PATH = "res/stats_" + System.currentTimeMillis() + "_" + METHOD + "_" + NORMALIZED + "_" + CROP + ".txt";
     private static final int[] POW_2 = {16, 32, 64, 128, 256};
     private static HashMap<Double, Integer> duplicateStats;
     private static HashMap<Double, Integer> differentStats;
-
+    private static DuplicateMethod method;
     private static ArrayList<Double> differentResults;
     private static ArrayList<Double> duplicateResults;
 
 
+
     public static void main(String[] args) {
+
+        if(METHOD.equals("ncc")) {
+            method = new NCC();
+        }
+        else if(METHOD.equals("sad")) {
+            method = new SAD();
+        }
+        else if(METHOD.equals("ssd")) {
+            method = new SSD();
+        }
+        else {
+            LOGGER.error("Invalid method");
+            return;
+        }
+
+
         long start = System.currentTimeMillis();
 
         duplicateStats = new HashMap<>();
@@ -95,7 +112,7 @@ public class Main {
                         ImagePlus i2_computed = computed[1];
 
                         // On calcule la distance souhaité
-                        double dist = DuplicateDetection.getDist(i1_computed, i2_computed, NORMALIZED, METHOD);
+                        double dist = method.getDist(i1_computed, i2_computed, NORMALIZED);
 
 
                         LOGGER.debug("Duplicate : " + i1_computed.getTitle() + " / " + i2_computed.getTitle() + " " + METHOD +" : " + dist);
@@ -115,7 +132,7 @@ public class Main {
                         ImagePlus i1_computed = computed[0];
                         ImagePlus i2_computed = computed[1];
 
-                        double dist = DuplicateDetection.getDist(i1_computed, i2_computed, NORMALIZED, METHOD);
+                        double dist = method.getDist(i1_computed, i2_computed, NORMALIZED);
                         LOGGER.debug("Different : " + i1_computed.getTitle() + " / " + i2_computed.getTitle() + " " + METHOD +" : " + dist);
                         if (differentStats.containsKey(dist)) {
                             differentStats.put(dist, differentStats.get(dist) + 1);
