@@ -29,13 +29,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        File resFile = new File("/res");
-        if(!resFile.exists()) {
-            if (!resFile.mkdir()) {
-                LOGGER.error("Impossible de créer le fichier res !");
-                return;
-            }
-        }
         if(METHOD.equals("ncc")) {
             method = new NCC();
         }
